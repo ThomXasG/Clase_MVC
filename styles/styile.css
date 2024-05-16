@@ -1,0 +1,31 @@
+.divSuma {
+    margin: 50px auto;
+    position: absolute;
+    padding-left: 50px;
+    top: 0;
+    left: 0;
+}
+
+.divResta {
+    margin: 50px auto;
+    position: absolute;
+    padding-right: 50px;
+    top: 0;
+    right: 0;
+}
+
+.divMulti {
+    margin: -150px auto;
+    position: absolute;
+    padding-left: 50px;
+    bottom: 0;
+    left: 0;
+}
+
+.divDivi {
+    margin: -150px auto;
+    position: absolute;
+    padding-right: 50px;
+    bottom: 0;
+    right: 0;
+}

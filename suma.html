@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="jquery-easyui-1.10.19/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="jquery-easyui-1.10.19/themes/icon.css">
+    <link rel="stylesheet" href="styles/styile.css">
+    <script type="text/javascript" src="jquery-easyui-1.10.19/jquery.min.js"></script>
+    <script type="text/javascript" src="jquery-easyui-1.10.19/jquery.easyui.min.js"></script>
+    <script src="js/operacion.js"></script>
+    <title>Suma</title>
+</head>
+<body>
+    <h1>Operaciones Basicas</h1>
+    <div class="divSuma">
+        <div style="margin:20px 0;"></div>
+        <div class="easyui-panel" title="Suma de Números" style="width:100%;max-width:400px;padding:30px 60px;">
+            <div style="margin-bottom:20px">
+                <input class="easyui-textbox" label="Primer Numero:" id="numero1" labelPosition="top" data-options="prompt:'Ingrese un numero...'"  style="width:100%;">
+            </div>
+            <div style="margin-bottom:20px">
+                <input class="easyui-textbox" label="Segundo Numero:" id="numero2" labelPosition="top" data-options="prompt:'Ingrese un numero...'" style="width:100%;">
+            </div>
+            <div>
+                <input type="button" class="easyui-linkbutton" iconCls="icon-ok" style="width:100%;height:32px" name="btnSumar" id="btnSumar" onclick="sumaDeNumeros()" value="Operaciones"> </input>
+            </div>
+        </div>
+        
+        <div style="margin:40px 0;"></div>
+        <div class="easyui-panel" title="Resultados " style="width:100%;max-width:400px;padding:60px 120px;">
+            <div style="margin-bottom:20px">
+                <p id="suma"></p>
+            </div>
+                 
+        </div>
+    </div>
+    <div class="divResta">
+        <div style="margin:20px 0;"></div>
+        <div class="easyui-panel" title="Resta de Números" style="width:100%;max-width:400px;padding:30px 60px;">
+            <div style="margin-bottom:20px">
+                <input class="easyui-textbox" label="Primer Numero:" id="numer1" labelPosition="top" data-options="prompt:'Ingrese un numero...'"  style="width:100%;">
+            </div>
+            <div style="margin-bottom:20px">
+                <input class="easyui-textbox" label="Segundo Numero:" id="numer2" labelPosition="top" data-options="prompt:'Ingrese un numero...'" style="width:100%;">
+            </div>
+            <div>
+                <input type="button" class="easyui-linkbutton" iconCls="icon-ok" style="width:100%;height:32px" name="btnSumar" id="btnSumar" onclick="restaDeNumeros()" value="Operaciones"> </input>
+            </div>
+        </div>
+        
+        <div style="margin:40px 0;"></div>
+        <div class="easyui-panel" title="Resultados " style="width:100%;max-width:400px;padding:60px 120px;">
+            <div style="margin-bottom:20px">
+                <p id="resta"></p>
+            </div> 
+        </div>
+    </div>
+    <div class="divMulti">
+        <div style="margin:20px 0;"></div>
+        <div class="easyui-panel" title="Multiplicación de Números" style="width:100%;max-width:400px;padding:30px 60px;">
+            <div style="margin-bottom:20px">
+                <input class="easyui-textbox" label="Primer Numero:" id="nume1" labelPosition="top" data-options="prompt:'Ingrese un numero...'"  style="width:100%;">
+            </div>
+            <div style="margin-bottom:20px">
+                <input class="easyui-textbox" label="Segundo Numero:" id="nume2" labelPosition="top" data-options="prompt:'Ingrese un numero...'" style="width:100%;">
+            </div>
+            <div>
+                <input type="button" class="easyui-linkbutton" iconCls="icon-ok" style="width:100%;height:32px" name="btnSumar" id="btnSumar" onclick="multiplicacionDeNumeros()" value="Operaciones"> </input>
+            </div>
+        </div>
+        
+        <div style="margin:40px 0;"></div>
+        <div class="easyui-panel" title="Resultados " style="width:100%;max-width:400px;padding:60px 120px;">
+            <div style="margin-bottom:20px">
+                <p id="multi"></p>
+            </div> 
+        </div>
+    </div>
+    <div class="divDivi">
+        <div style="margin:20px 0;"></div>
+        <div class="easyui-panel" title="División de Números" style="width:100%;max-width:400px;padding:30px 60px;">
+            <div style="margin-bottom:20px">
+                <input class="easyui-textbox" label="Primer Numero:" id="num1" labelPosition="top" data-options="prompt:'Ingrese un numero...'"  style="width:100%;">
+            </div>
+            <div style="margin-bottom:20px">
+                <input class="easyui-textbox" label="Segundo Numero:" id="num2" labelPosition="top" data-options="prompt:'Ingrese un numero...'" style="width:100%;">
+            </div>
+            <div>
+                <input type="button" class="easyui-linkbutton" iconCls="icon-ok" style="width:100%;height:32px" name="btnSumar" id="btnSumar" onclick="divisionDeNumeros()" value="Operaciones"> </input>
+            </div>
+        </div>
+        
+        <div style="margin:40px 0;"></div>
+        <div class="easyui-panel" title="Resultados " style="width:100%;max-width:400px;padding:60px 120px;">
+            <div style="margin-bottom:20px">
+                <p id="divi"></p>
+            </div> 
+        </div>
+    </div>
+</body>
+</html>
