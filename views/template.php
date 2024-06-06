@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="jquery-easyui-1.10.19/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="jquery-easyui-1.10.19/themes/black/easyui.css">
     <link rel="stylesheet" type="text/css" href="jquery-easyui-1.10.19/themes/icon.css">
     <link rel="stylesheet" type="text/css" href="jquery-easyui-1.10.19/easyui/themes/color.css">
     <script type="text/javascript" src="jquery-easyui-1.10.19/jquery.min.js"></script>
@@ -29,6 +29,9 @@
         </nav>
     </header>
     <main>
+        <br>
+        <br>
+        <br>
         <?php
             $mvc = new MvcController();
             $mvc -> enlacesPaginasController();
