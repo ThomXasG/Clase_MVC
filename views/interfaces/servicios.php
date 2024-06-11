@@ -20,6 +20,10 @@
         onclick="editUser()">Actualizar Estudiante</a>
     <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-remove" plain="true"
         onclick="destroyUser()">Eliminar Estudiante</a>
+    <a href="javascript:void(0)" class="easyui-linkbutton" plain="true" onclick="reporteGeneral()">Reporte General</a>
+    <input id="cedula" name="cedula" class="easyui-textbox" label="Buscar por Cedula" style="width:200px">
+    <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-search" plain="true" onclick="buscarEstCed()">Buscar</a>
+    <a href="javascript:void(0)" class="easyui-linkbutton" plain="true" onclick="reporteGeneral2()">Reporte General</a>
 </div>
 
 <div id="dlg" class="easyui-dialog" style="width:400px"
@@ -204,4 +208,35 @@
             });
         }
     }
+    function reporteGeneral() {
+        window.open('reports/reporte.php', '_blank');
+    }
+    function buscarEstCed() {
+        var cedula = $('#cedula').textbox('getValue');
+        console.log('Cedula:', cedula); // Verificar en la consola
+
+        $.post('models/selectEstCed.php', { cedula: cedula }, function (result) {
+            console.log('Result:', result); // Verificar la respuesta del servidor
+            if (result.success) {
+                window.open('reports/parameterReport.php', '_blank'); // Abrir la página del informe
+            } else {
+                $.messager.show({
+                    title: 'Error',
+                    msg: result.errorMsg
+                });
+            }
+        }, 'json');
+    }
+    function reporteGeneral2() {
+    $.get('reports/reporteGeneral.php', function(data) {
+        if (data.includes("Report generated successfully")) {
+            window.open('reports/general_report.pdf', '_blank'); // Adjust the path as needed
+        } else {
+            $.messager.show({
+                title: 'Error',
+                msg: 'Error generating report: ' + data
+            });
+        }
+    });
+}
 </script>
