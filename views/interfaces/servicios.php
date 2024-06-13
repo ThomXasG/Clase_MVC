@@ -22,7 +22,8 @@
         onclick="destroyUser()">Eliminar Estudiante</a>
     <a href="javascript:void(0)" class="easyui-linkbutton" plain="true" onclick="reporteGeneral()">Reporte General</a>
     <input id="cedula" name="cedula" class="easyui-textbox" label="Buscar por Cedula" style="width:200px">
-    <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-search" plain="true" onclick="buscarEstCed()">Buscar</a>
+    <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-search" plain="true"
+        onclick="buscarEstCed()">Buscar</a>
     <a href="javascript:void(0)" class="easyui-linkbutton" plain="true" onclick="reporteGeneral2()">Reporte General</a>
 </div>
 
@@ -228,15 +229,15 @@
         }, 'json');
     }
     function reporteGeneral2() {
-    $.get('reports/reporteGeneral.php', function(data) {
-        if (data.includes("Report generated successfully")) {
-            window.open('reports/general_report.pdf', '_blank'); // Adjust the path as needed
-        } else {
-            $.messager.show({
-                title: 'Error',
-                msg: 'Error generating report: ' + data
-            });
-        }
-    });
-}
+        $.get('reports/reporteGeneral.php', function (data) {
+            if (data.includes("Report generated successfully")) {
+                window.open('reports/general_report.pdf', '_blank'); // Adjust the path as needed
+            } else {
+                $.messager.show({
+                    title: 'Error',
+                    msg: 'Error generating report: ' + data
+                });
+            }
+        });
+    }
 </script>

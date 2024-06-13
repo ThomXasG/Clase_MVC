@@ -14,7 +14,8 @@
     $sqlUpdate = "UPDATE estudiantes SET estNombre = '$nombre', estApellido = '$apellido', estTelefono = '$telefono', estDireccion = '$direccion', curId = '$cuID' WHERE estCedula = '$cedula'";
 
     if ($con->query($sqlUpdate)) {
-        echo "Registro actualizado";
+        
+        header("Location: ../index.php?action=nosotros");
     } else {
         echo "Error: " . $sqlUpdate . "<br>" . mysqli_error($con);
     }

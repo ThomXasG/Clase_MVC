@@ -9,7 +9,7 @@
     $sqlDelete = "DELETE FROM estudiantes WHERE estCedula = '$cedul'";
 
     if ($con->query($sqlDelete)) {
-        echo "Registro eliminado";
+        header("Location: ../index.php?action=nosotros");
     } else {
         echo "Error: " . $sqlDelete . "<br>" . mysqli_error($con);
     }

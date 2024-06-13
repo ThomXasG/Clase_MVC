@@ -14,7 +14,8 @@
     $sqlInsert = "INSERT INTO estudiantes VALUES ('$cedula', '$nombre', '$apellido', '$telefono', '$direccion', '$cuID')";
 
     if ($con->query($sqlInsert)) {
-        echo "Registro guardado";
+        
+        header("Location: ../index.php?action=nosotros");
     } else {
         echo "Error: " . $sqlInsert . "<br>" . mysqli_error($con);
     }
